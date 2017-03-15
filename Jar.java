@@ -38,15 +38,9 @@ public class Jar {
 		
 		System.out.println("What type of item?");
 		itemN = scanner.nextLine();
-		System.out.printf("What is the maximum amount of  %s?",
+		System.out.printf("What is the maximum amount of  %s?%n",
 							itemN);
 		maxN = scanner.nextInt();
-	}
-	
-	public void writeOutPut(){
-		System.out.printf("item: %s %n", itemN);
-		System.out.printf("max number: %d %n", maxN);
-		
 	}
 	
 	public void writePlayer(){
@@ -62,7 +56,7 @@ public class Jar {
 		do {
 			System.out.printf("Enter a number: ");
 			guessNumber = scanner.nextInt();
-			tries ++;
+			++tries;
 			int remaingTries = MAX_TRY - tries;
 			System.out.printf("You have only %d tryes left.%n",
 								remaingTries);

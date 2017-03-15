@@ -13,7 +13,7 @@ public class GuessingGame {
 		Jar jar = new Jar(itemName,maxNumber);
 		
 		jar.readInput();
-		jar.writeOutPut();
+		
 		
 		System.out.printf("PLAYER %n");
 		System.out.printf("=================== %n");
