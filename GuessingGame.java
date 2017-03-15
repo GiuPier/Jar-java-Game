@@ -7,8 +7,10 @@ public class GuessingGame {
 		
 		System.out.printf("ADMINISTRATOR SETUP %n");
 		System.out.printf("=================== %n");
+    String itemName = null;
+    int maxNumber = 0;
 		
-		Jar jar = new Jar();
+		Jar jar = new Jar(itemName,maxNumber);
 		
 		jar.readInput();
 		jar.writeOutPut();
