@@ -8,7 +8,7 @@ public class Jar {
 	private int maxN;
 	private int ranNumber;
 	private int guessNumber;
-	private static final int MAX_TRY = 7;
+	
 	
 	
 	Scanner scanner = new Scanner(System.in);
@@ -53,30 +53,26 @@ public class Jar {
 	
 	public void applyGuess(){
 		int tries = 0;
-		do {
+		while (guessNumber != ranNumber){
 			System.out.printf("Enter a number: ");
 			guessNumber = scanner.nextInt();
 			++tries;
-			int remaingTries = MAX_TRY - tries;
-			System.out.printf("You have only %d tryes left.%n",
-								remaingTries);
-			if(remaingTries == 0){
-				System.out.printf("You are a looser. No more guesses times.%n The number was %d!",ranNumber);
-				System.exit(0);
-      }
+			
+			
       if(guessNumber < maxN && guessNumber > ranNumber){
-      System.out.printf("Your number %d is more than the number of %s in the jar.%n",
+      System.out.printf("Your guess is too high.%n",
                         guessNumber,
                         itemN);
     }else{
-      System.out.printf("Your number %d is less than the number of %s in the jar.%n",
+      System.out.printf("Your guess is too low.%n",
                         guessNumber,
                         itemN);
-    }
-		}while (guessNumber != ranNumber);
-		if(guessNumber == ranNumber){
-			System.out.printf("Congratulations you won.%n"
-					+ "You got it in %d attempts!",tries);
+      }
+      if(guessNumber == ranNumber){
+    System.out.printf("You got it in %d attempts(s).%n",
+								tries);
+      }
+     
 		} 
   }
 }

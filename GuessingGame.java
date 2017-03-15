@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class GuessingGame {
 	public static void main (String[]args){
 		
-		System.out.printf("ADMINISTRATOR SETUP %n");
-		System.out.printf("=================== %n");
+		
     String itemName = null;
     int maxNumber = 0;
 		
@@ -15,8 +14,7 @@ public class GuessingGame {
 		jar.readInput();
 		
 		
-		System.out.printf("PLAYER %n");
-		System.out.printf("=================== %n");
+		
 		
 		jar.writePlayer();
 		jar.fill();
