@@ -29,7 +29,7 @@ public class Jar {
 	public int fill(){
 		
 		Random rand = new Random();
-	    ranNumber = rand.nextInt(maxN);
+	    ranNumber = rand.nextInt(maxN)+1;
 	    return ranNumber;
 	}
 	
@@ -44,9 +44,10 @@ public class Jar {
 	}
 	
 	public void writePlayer(){
-		System.out.printf("How many %s are in the jars?%n"
+		System.out.printf("What is the maximum amount of %s?%nHow many %s are in the jars?%n"
 	                    + "Pick a number between 1 and %d.%n",
 							itemN,
+              itemN,
 							maxN);
 		
 	}
