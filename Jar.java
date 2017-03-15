@@ -29,7 +29,7 @@ public class Jar {
 	public int fill(){
 		
 		Random rand = new Random();
-	    ranNumber = rand.nextInt(maxN) + 1;
+	    ranNumber = rand.nextInt(maxN);
 	    return ranNumber;
 	}
 	
@@ -44,8 +44,8 @@ public class Jar {
 	}
 	
 	public void writePlayer(){
-		System.out.printf("Your goal is to guess how many %s are in the jars.%n"
-	                    + "Your guess shoul be between 1 and %d.%n",
+		System.out.printf("How many %s are in the jars?%n"
+	                    + "Pick a number between 1 and %d.%n",
 							itemN,
 							maxN);
 		
@@ -63,7 +63,7 @@ public class Jar {
 			if(remaingTries == 0){
 				System.out.printf("You are a looser. No more guesses times.%n The number was %d!",ranNumber);
 				System.exit(0);
-			}
+      }
       if(guessNumber < maxN && guessNumber > ranNumber){
       System.out.printf("Your number %d is more than the number of %s in the jar.%n",
                         guessNumber,
@@ -75,13 +75,8 @@ public class Jar {
     }
 		}while (guessNumber != ranNumber);
 		if(guessNumber == ranNumber){
-			System.out.printf("Congratulations you won.%n The number was %d.%n"
-					+ "You guess the number of %s in %d times!", 
-					ranNumber,
-					itemN,
-					tries);
-		}
-    
-    
+			System.out.printf("Congratulations you won.%n"
+					+ "You got it in %d attempts!",tries);
+		} 
   }
 }
